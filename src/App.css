@@ -27,12 +27,17 @@ body {
   display: block;
 }
 
-.card:hover {
+.card-open {
   background: #15161e;
+}
+
+.card:hover {
+  background: #24252c;
 }
 
 .card-header {
   display: flex;
+  gap: 1em;
   justify-content: space-between;
   align-items: center;
 }
@@ -44,6 +49,7 @@ body {
   border-radius: 0.5em;
   background: #abb0ec;
   border: none;
+  white-space: nowrap;
 }
 
 .card-header > button:hover {

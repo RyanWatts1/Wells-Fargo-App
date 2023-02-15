@@ -8,7 +8,7 @@ export default function Card({ holiday }) {
   };
 
   return (
-    <div className="card">
+    <div className={`card ${open && "card-open"}`}>
       <div className="card-header">
         <h3>{holiday.name}</h3>
         <button onClick={toggleOpen}>Read More</button>
