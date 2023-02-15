@@ -1,22 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Card from "./components/Card";
+import "./App.css";
 
 function App() {
+  const [holidays, setHolidays] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://date.nager.at/api/v2/publicholidays/2020/US`)
+      .then((response) => response.json())
+      .then((holidays) => setHolidays(holidays));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>Holidays</h2>
+        {holidays.map((holiday) => (
+          <Card key={holiday.name} holiday={holiday} />
+        ))}
       </header>
     </div>
   );
