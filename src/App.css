@@ -50,6 +50,9 @@ body {
   background: #abb0ec;
   border: none;
   white-space: nowrap;
+  color: #15161e;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .card-header > button:hover {
