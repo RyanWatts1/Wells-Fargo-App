@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./components/Card";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   const [holidays, setHolidays] = useState([]);
@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="bg-slate-600">
       <header className="App-header">
         <h2>Holidays</h2>
         {holidays.map((holiday) => (

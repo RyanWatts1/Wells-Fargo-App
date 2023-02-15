@@ -11,7 +11,6 @@ body {
   display: grid;
   padding: 1em;
   gap: 1em;
-  flex-direction: column;
   text-align: start;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -21,10 +20,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5em;
-  padding-left: 1 em;
-  padding-right: 1 em;
+  padding-left: 1em;
+  padding-right: 1em;
   background: #272935;
   border-radius: 0.5em;
+  display: block;
 }
 
 .card:hover {
